@@ -45,6 +45,8 @@ function allActions(){
 
   document.getElementById("search-bar").addEventListener("keyup", function (e) {
 
+  	alert(e)
+
   	let key = e.which || e.keyCode
 
     if (key === 13) {
