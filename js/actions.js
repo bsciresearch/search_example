@@ -76,8 +76,8 @@ function allActions(){
   // Combine data and redirect
   function redirectQualtrics() {
 
-    // var urlRedirect = new URL("https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr=" + wid + "&cl=" + click_location + "&dC_h=" + dC_h + "&dispC_h=" + dispC_h + "&v=" + 1)
-    var urlRedirect= "https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr=${wid}&cl=${click_location}&dC_h=${dC_h}&dispC_h=${dispC_h}"
+    var urlRedirect = new URL("https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr=" + wid + "&cl=" + click_location + "&dC_h=" + dC_h + "&dispC_h=" + dispC_h + "&v=" + 1)
+    // var urlRedirect= "https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr=${wid}&cl=${click_location}&dC_h=${dC_h}&dispC_h=${dispC_h}"
     window.location = urlRedirect
   }
 
