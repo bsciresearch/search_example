@@ -17,9 +17,9 @@ function allActions(){
   // Give the parameter a variable name
   let dC_h = getParameterByName('hpp');
   dC_h = decodeURIComponent(dC_h)
-  // dC_h = dC_h.replace(/%20/g, " ")
 
   var elem = document.querySelector('#dynamic-content');
+
 
   // Set HTML content
   if (dC_h.length > 0) {
@@ -56,6 +56,7 @@ function allActions(){
 
   }
 
+
   document.getElementById("search-button").addEventListener("click", function() {
   	click_location = "srch"
     redirectQualtrics()
@@ -67,6 +68,7 @@ function allActions(){
     redirectQualtrics()
   })
 
+
   // Redirect after 10 seconds, regardless of activity
   setTimeout(redirectQualtrics, 10000)
 
@@ -74,9 +76,8 @@ function allActions(){
   // Combine data and redirect
   function redirectQualtrics() {
 
-    var urlRedirect = new URL("https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr=" + wid + "&cl=" + click_location + "&dC_h=" + dC_h + "&dispC_h=" + dispC_h + "&v=" + 1)
-
-    // var urlRedirect= "https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr=${wid}&cl=${click_location}&dC_h=${dC_h}&dispC_h=${dispC_h}"
+    // var urlRedirect = new URL("https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr=" + wid + "&cl=" + click_location + "&dC_h=" + dC_h + "&dispC_h=" + dispC_h + "&v=" + 1)
+    var urlRedirect= "https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr=${wid}&cl=${click_location}&dC_h=${dC_h}&dispC_h=${dispC_h}"
     window.location = urlRedirect
   }
 
