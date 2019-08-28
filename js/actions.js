@@ -44,12 +44,14 @@ function allActions(){
   let click_location = "default"
 
   document.getElementById("search-bar").addEventListener('keypress', function (e) {
-    var key = e.which || e.keyCode;
+    var key = e.which || e.keyCode
+
     if (key === 13) {
     	click_location = "srch-ent"
-    	redirectQualtrics()
+    	// redirectQualtrics()
+    	alert(click_location)
     }
-  });
+  })
 
 
   document.getElementById("search-button").addEventListener("click", searchButtonClick);
