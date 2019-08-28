@@ -45,7 +45,7 @@ function allActions(){
 
   document.getElementById("search-bar").onkeydown = function (e) {
 
-  	// e.preventDefault()
+  	e.preventDefault()
 
   	let key = e.which || e.keyCode
 
