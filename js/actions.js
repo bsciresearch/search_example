@@ -47,9 +47,8 @@ function allActions(){
 
   	let key = e.which || e.keyCode
 
-  	alert(key)
-
     if (key === 13) {
+    	e.preventDefault()
     	click_location = "srch-ent"
     	redirectQualtrics()
     }
