@@ -42,8 +42,8 @@ function allActions(){
 
   // Capture click location
   let click_location = "default"
-  
-  document.getElementById('search-bar').addEventListener('keypress', function (e) {
+
+  document.getElementById("search-bar").addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) {
     	click_location = "srch-ent"
@@ -51,12 +51,14 @@ function allActions(){
     }
   });
 
+
   document.getElementById("search-button").addEventListener("click", searchButtonClick);
 
   function searchButtonClick() {
     click_location = "srch"
     redirectQualtrics()
   }
+
 
   document.getElementById("dynamic-content").addEventListener("click", hppButtonClick);
 
