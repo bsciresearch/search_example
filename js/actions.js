@@ -43,7 +43,7 @@ function allActions(){
   // Capture click location
   let click_location = "default"
 
-  document.getElementById("search-bar").addEventListener('keypress', function (e) {
+  document.getElementById("search-bar").onkeypress = function (e) {
 
   	let key = e.which || e.keyCode
 
@@ -52,7 +52,7 @@ function allActions(){
     	redirectQualtrics()
     }
 
-  })
+  }
 
 
   document.getElementById("search-button").addEventListener("click", searchButtonClick);
