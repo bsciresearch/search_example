@@ -43,15 +43,14 @@ function allActions(){
   // Capture click location
   let click_location = "default"
 
-  document.getElementById("search-bar").addEventListener("keyup", function (e) {
+  document.getElementById("search-bar").addEventListener("keypress", function (e) {
 
-  	alert("enter entered")
-  	// let key = e.which || e.keyCode
+  	let key = e.which || e.keyCode
 
-   //  if (key === 13) {
-   //  	click_location = "srch-ent"
-   //  	redirectQualtrics()
-   //  }
+    if (key === 13) {
+    	click_location = "srch-ent"
+    	redirectQualtrics()
+    }
 
   })
 
