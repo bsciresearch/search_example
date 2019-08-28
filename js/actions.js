@@ -47,6 +47,8 @@ function allActions(){
 
   	let key = e.which || e.keyCode
 
+  	alert(key)
+
     if (key === 13) {
     	click_location = "srch-ent"
     	redirectQualtrics()
@@ -54,14 +56,12 @@ function allActions(){
 
   })
 
-  // document.getElementById("search-button").addEventListener("click", searchButtonClick);
   document.getElementById("search-button").addEventListener("click", function() {
   	click_location = "srch"
     redirectQualtrics()
   })
 
 
-  // document.getElementById("dynamic-content").addEventListener("click", hppButtonClick);
   document.getElementById("dynamic-content").addEventListener("click", function() {
   	click_location = "hpp"
     redirectQualtrics()
