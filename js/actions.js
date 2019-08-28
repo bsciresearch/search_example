@@ -16,7 +16,8 @@ function allActions(){
 
   // Give the parameter a variable name
   let dC_h = getParameterByName('hpp');
-  dC_h = dC_h.replace(/%20/g, " ")
+  dC_h = decodeURIComponent(dC_h)
+  // dC_h = dC_h.replace(/%20/g, " ")
 
   var elem = document.querySelector('#dynamic-content');
 
