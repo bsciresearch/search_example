@@ -41,6 +41,14 @@ function allActions(){
 
 
   // Capture click location
+  document.getElementById('search-bar').addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+    	click_location = "srch-ent"
+    	redirectQualtrics()
+    }
+  });
+
   let click_location = "default"
   document.getElementById("search-button").addEventListener("click", searchButtonClick);
 
