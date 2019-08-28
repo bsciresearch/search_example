@@ -43,7 +43,8 @@ function allActions(){
   // Capture click location
   let click_location = "default"
 
-  document.getElementById("search-bar").addEventListener("keyup", function (e) {
+  // document.getElementById("search-bar").addEventListener("keypress", function (e) {
+  document.getElementById("search-bar").onkeydown = function (e) {
 
   	e.preventDefault()
 
@@ -57,7 +58,7 @@ function allActions(){
     	redirectQualtrics()
     }
 
-  })
+  }
 
   document.getElementById("search-button").addEventListener("click", function() {
   	click_location = "srch"
