@@ -45,11 +45,10 @@ function allActions(){
 
   document.getElementById("search-bar").onkeydown = function (e) {
 
-  	e.preventDefault()
-
   	let key = e.which || e.keyCode
 
     if (key === 13) {
+    	e.preventDefault()
     	click_location = "srch-ent"
     	redirectQualtrics()
     }
