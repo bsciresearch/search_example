@@ -45,16 +45,11 @@ function allActions(){
 
   document.getElementById("search-bar").addEventListener('keypress', function (e) {
 
-  	alert("keypress")
+  	let key = e.which || e.keyCode
 
-    var key = e.which || e.keyCode
-
-    alert(key)
-
-    if (key === 13) {
+    if (key == 13) {
     	click_location = "srch-ent"
-    	// redirectQualtrics()
-    	alert(click_location)
+    	redirectQualtrics()
     }
 
   })
