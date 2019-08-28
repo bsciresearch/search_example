@@ -44,6 +44,9 @@ function allActions(){
   let click_location = "default"
 
   document.getElementById("search-bar").addEventListener('keypress', function (e) {
+
+  	alert("keypress")
+
     var key = e.which || e.keyCode
 
     alert(key)
