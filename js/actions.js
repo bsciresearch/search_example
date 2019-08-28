@@ -41,6 +41,8 @@ function allActions(){
 
 
   // Capture click location
+  let click_location = "default"
+  
   document.getElementById('search-bar').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) {
@@ -49,7 +51,6 @@ function allActions(){
     }
   });
 
-  let click_location = "default"
   document.getElementById("search-button").addEventListener("click", searchButtonClick);
 
   function searchButtonClick() {
