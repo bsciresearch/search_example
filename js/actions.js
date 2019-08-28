@@ -43,7 +43,7 @@ function allActions(){
   // Capture click location
   let click_location = "default"
 
-  document.getElementById("search-bar").addEventListener("keypress", function (e) {
+  document.getElementById("search-bar").addEventListener("keyup", function (e) {
 
   	let key = e.which || e.keyCode
 
@@ -54,21 +54,18 @@ function allActions(){
 
   })
 
-
-  document.getElementById("search-button").addEventListener("click", searchButtonClick);
-
-  function searchButtonClick() {
-    click_location = "srch"
+  // document.getElementById("search-button").addEventListener("click", searchButtonClick);
+  document.getElementById("search-button").addEventListener("click", function() {
+  	click_location = "srch"
     redirectQualtrics()
-  }
+  })
 
 
-  document.getElementById("dynamic-content").addEventListener("click", hppButtonClick);
-
-  function hppButtonClick() {
-    click_location = "hpp"
+  // document.getElementById("dynamic-content").addEventListener("click", hppButtonClick);
+  document.getElementById("dynamic-content").addEventListener("click", function() {
+  	click_location = "hpp"
     redirectQualtrics()
-  }
+  })
 
   // Redirect after 10 seconds, regardless of activity
   setTimeout(redirectQualtrics, 10000)
