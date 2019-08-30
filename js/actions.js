@@ -73,12 +73,11 @@ function allActions(){
 
 
   // Redirect after 10 seconds, regardless of activity
-  // setTimeout(redirectQualtrics, 10000)
+  setTimeout(redirectQualtrics, 10000)
 
 
   // Combine data and redirect
   function redirectQualtrics() {
-
     const urlRedirect= `https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr='${wid}'&cl='${click_location}'&dC_h='${dC_h}'&dispC_h='${dispC_h}'&v=1`
     window.location = urlRedirect
   }
