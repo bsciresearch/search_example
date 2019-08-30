@@ -22,6 +22,15 @@ function allActions(){
   }
 
   dC_h = decodeURIComponent(dC_h)
+  let dC_h_original = dC_h
+
+  if(dC_h.includes(" Find resources and learn")) {
+  	dC_h = dC_h.replace(" Find resources", "\nFind resources")
+  }
+
+  if(dC_h.includes(" Learn more about")) {
+  	dC_h = dC_h.replace(" Learn more", "\nLearn more")
+  }
 
 
   let elem = document.querySelector('#dynamic-content');
@@ -78,7 +87,7 @@ function allActions(){
 
   // Combine data and redirect
   function redirectQualtrics() {
-    const urlRedirect= `https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr='${wid}'&cl='${click_location}'&dC_h='${dC_h}'&dispC_h='${dispC_h}'&v=1`
+    const urlRedirect= `https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr='${wid}'&cl='${click_location}'&dC_h='${dC_h_original}'&dispC_h='${dispC_h}'&v=1`
     window.location = urlRedirect
   }
 
