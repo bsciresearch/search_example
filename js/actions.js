@@ -25,12 +25,12 @@ function allActions(){
   let dC_h_original = dC_h
 
   if(String(dC_h).includes(" Find resources and learn")) {
-  	dC_h = dC_h.replace(" Find resources", "\nFind resources")
+  	dC_h = dC_h.replace(" Find resources", "\r\nFind resources")
   	alert(dC_h)
   }
 
   if(String(dC_h).includes(" Learn more about")) {
-  	dC_h = dC_h.replace(" Learn more", "\nLearn more")
+  	dC_h = dC_h.replace(" Learn more", "\r\nLearn more")
   	alert(dC_h)
   }
 
