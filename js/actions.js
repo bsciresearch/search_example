@@ -26,10 +26,12 @@ function allActions(){
 
   if(dC_h.includes(" Find resources and learn")) {
   	dC_h = dC_h.replace(" Find resources", "\nFind resources")
+  	alert(dC_h)
   }
 
   if(dC_h.includes(" Learn more about")) {
   	dC_h = dC_h.replace(" Learn more", "\nLearn more")
+  	alert(dC_h)
   }
 
 
