@@ -23,35 +23,15 @@ function allActions(){
 
   dC_h = decodeURIComponent(dC_h)
   
-  let dC_h_original = dC_h
-
-  if(String(dC_h).includes(" Find resources and learn")) {
-  	dC_h = dC_h.replace(" Find resources", "<br>Find resources")
-  }
-
-  if(String(dC_h).includes(" Learn more about")) {
-  	dC_h = dC_h.replace(" Learn more", "<br>Learn more")
-  }
-
   let elem = document.querySelector('#dynamic-content');
-
 
   // Set HTML content
   if (dC_h.length > 0) {
     elem.innerHTML = dC_h
   }
 
-
   // Get HTML content
   let dispC_h = elem.innerHTML
-
-
-  // Get Worker ID
-  let wid = getParameterByName('w')
-
-  if (!wid) {
-    wid = "no_id_provided"
-  }
 
 
   // Capture click location
@@ -79,16 +59,10 @@ function allActions(){
   	click_location = "hpp"
     redirectQualtrics()
   })
-
-
-  // Redirect after 10 seconds, regardless of activity
-  setTimeout(redirectQualtrics, 10000)
-
-
+  
   // Combine data and redirect
   function redirectQualtrics() {
-    const urlRedirect= `https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr='${wid}'&cl='${click_location}'&dC_h='${dC_h_original}'&dispC_h='${dispC_h}'&v=1`
-    window.location = urlRedirect
+    alert("If the user clicks here, they will be redirected to the survey to answer questions about their experience")
   }
 
 }
