@@ -23,6 +23,7 @@ function allActions(){
 
   dC_h = decodeURIComponent(dC_h)
 
+
   let elem = document.querySelector('#dynamic-content');
 
 
@@ -78,7 +79,7 @@ function allActions(){
   // Combine data and redirect
   function redirectQualtrics() {
 
-    const urlRedirect= `https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr='${wid}'&cl='${click_location}'&dC_h='${dC_h}'&dispC_h='${dispC_h}'`
+    const urlRedirect= `https://google.qualtrics.com/jfe/form/SV_eeumk4pgZ3aARHT?wr='${wid}'&cl='${click_location}'&dC_h='${dC_h}'&dispC_h='${dispC_h}'&v=1`
     window.location = urlRedirect
   }
 
