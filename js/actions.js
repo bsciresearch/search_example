@@ -23,15 +23,13 @@ function allActions(){
 
   dC_h = decodeURIComponent(dC_h)
   let dC_h_original = dC_h
-
+ 
   if(String(dC_h).includes(" Find resources and learn")) {
   	dC_h = dC_h.replace(" Find resources", "<br>Find resources")
-  	alert(dC_h)
   }
 
   if(String(dC_h).includes(" Learn more about")) {
   	dC_h = dC_h.replace(" Learn more", "<br>Learn more")
-  	alert(dC_h)
   }
 
 
